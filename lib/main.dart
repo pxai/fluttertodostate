@@ -42,6 +42,7 @@ class MyHomePage extends ConsumerWidget {
           title: Text(title),
         ),
         body: ListView.builder(
+          key: const ValueKey('todo_list'),
           itemCount: unCompletedTodos.length,
           itemBuilder: (context, index) {
             return ListTile(
@@ -66,6 +67,7 @@ class MyHomePage extends ConsumerWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               FloatingActionButton(
+                key: const Key('add_todo'),
                 onPressed: () {
                   Navigator.of(context).push(
                       MaterialPageRoute(builder: (context) => const AddTodo()));

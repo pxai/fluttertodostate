@@ -14,6 +14,7 @@ class AddTodo extends ConsumerWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: [
           Padding(
+            key: const ValueKey('add_todo_textfield'),
             padding: const EdgeInsets.all(8.0),
             child: TextField(
               controller: controller,
@@ -21,6 +22,7 @@ class AddTodo extends ConsumerWidget {
             ),
           ),
           TextButton(
+              key: const ValueKey('add_todo_button'),
               onPressed: () {
                 // how to get todoListProvider.notifier
                 ref.read(todoListProvider.notifier).add(controller.text);
