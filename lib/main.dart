@@ -67,6 +67,7 @@ class MyHomePage extends ConsumerWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               FloatingActionButton(
+                heroTag: "btn1",
                 key: const Key('add_todo'),
                 onPressed: () {
                   Navigator.of(context).push(
@@ -76,6 +77,7 @@ class MyHomePage extends ConsumerWidget {
                 child: const Icon(Icons.add),
               ),
               FloatingActionButton(
+                heroTag: "btn2",
                 onPressed: () {
                   Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) =>
